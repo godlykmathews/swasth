@@ -10,6 +10,7 @@ from psycopg import OperationalError
 
 from .cloudinary_service import upload_asset
 from .config import get_settings
+from .email_service import send_estate_email
 from .models import (
     ActivationIn,
     DeathDeclarationIn,
@@ -107,6 +108,11 @@ def health() -> Dict[str, Any]:
         "startup_error": startup_state["startup_error"],
         "cloudinary_configured": settings.cloudinary_configured,
         "openai_configured": settings.openai_configured,
+        "email_delivery_enabled": settings.email_delivery_enabled,
+        "email_configured": settings.email_configured,
+        "smtp_host": settings.smtp_host,
+        "smtp_force_test_recipient": settings.smtp_force_test_recipient,
+        "smtp_test_recipient": settings.smtp_test_recipient,
         "auto_migrate": settings.auto_migrate,
     }
 
@@ -310,13 +316,25 @@ def declare_death(payload: DeathDeclarationIn) -> Dict[str, Any]:
     notifications = []
     for target in targets:
         email = generate_estate_email(plan, target, declaration)
+        delivery = send_estate_email(
+            target=target,
+            subject=email["subject"],
+            body=email["body"],
+            declarant_email=declaration["declarant_email"],
+        )
         notifications.append(
             {
                 **target,
+                "intended_recipient_email": target["recipient_email"],
+                "recipient_email": delivery["recipient_email"],
                 "subject": email["subject"],
                 "body": email["body"],
-                "provider": email["provider"],
-                "status": "sent_dummy",
+                "provider": f"{email['provider']}+{delivery['provider']}",
+                "content_provider": email["provider"],
+                "delivery_provider": delivery["provider"],
+                "status": delivery["status"],
+                "sent_at": delivery["sent_at"],
+                "delivery_error": delivery["error"],
             }
         )
 

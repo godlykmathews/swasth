@@ -24,7 +24,7 @@ def generate_estate_email(plan: JsonDict, target: JsonDict, declaration: JsonDic
             "Do not invent account numbers, policy numbers, or legal facts.",
             "Do not include passwords or credentials.",
             "Tone should be formal, sad, practical, and suitable after a death.",
-            "The email is a draft for executor review and sent only to dummy hackathon addresses.",
+            "The email should be safe for executor review and should not claim legal authority beyond the declaration data.",
         ],
         "person": {
             "full_name": plan.get("full_name"),

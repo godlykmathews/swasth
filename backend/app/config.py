@@ -39,6 +39,15 @@ class Settings:
         self.cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET", "")
         self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
         self.openai_model = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+        self.email_delivery_enabled = os.getenv("EMAIL_DELIVERY_ENABLED", "false").lower() in {"1", "true", "yes"}
+        self.smtp_host = os.getenv("SMTP_HOST", "smtp.gmail.com")
+        self.smtp_port = int(os.getenv("SMTP_PORT", "587"))
+        self.smtp_username = os.getenv("SMTP_USERNAME", "")
+        self.smtp_password = os.getenv("SMTP_PASSWORD", "")
+        self.smtp_from_email = os.getenv("SMTP_FROM_EMAIL", self.smtp_username)
+        self.smtp_from_name = os.getenv("SMTP_FROM_NAME", "AFTERLIFE AI Executor")
+        self.smtp_test_recipient = os.getenv("SMTP_TEST_RECIPIENT", "")
+        self.smtp_force_test_recipient = os.getenv("SMTP_FORCE_TEST_RECIPIENT", "true").lower() in {"1", "true", "yes"}
         self.auto_migrate = os.getenv("AUTO_MIGRATE", "true").lower() in {"1", "true", "yes"}
         self.cors_origins = [
             origin.strip()
@@ -67,6 +76,10 @@ class Settings:
     @property
     def openai_configured(self) -> bool:
         return bool(self.openai_api_key)
+
+    @property
+    def email_configured(self) -> bool:
+        return bool(self.smtp_host and self.smtp_username and self.smtp_password and self.smtp_from_email)
 
     @property
     def dsn(self) -> str:

@@ -37,7 +37,7 @@ export default function ExecutorPage() {
       saveLegacySession(result.legacy_id, activationCode);
       setLegacyId(result.legacy_id);
       setNotifications(result.notifications);
-      setStatus("Record marked deceased. Dummy notifications stored and marked sent.");
+      setStatus("Record marked deceased. Service notifications prepared and delivery status saved.");
     } catch {
       setStatus("Could not confirm. Check the code, FastAPI server, Supabase credentials, and try again.");
     } finally {
@@ -135,7 +135,7 @@ export default function ExecutorPage() {
               {notifications.length === 0 ? (
                 <div className="border border-[#c9a66b]/35 bg-[#fff4dc]/5 p-5 text-[#e8d5b5]">
                   No notifications have been generated yet. After confirmation, the backend will
-                  create a separate dummy email record for each subscription, social account,
+                  prepare a separate service email for each subscription, social account,
                   financial account, and insurance policy.
                 </div>
               ) : (

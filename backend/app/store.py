@@ -268,10 +268,10 @@ class SupabaseStore:
                     "recipient_email": notification["recipient_email"],
                     "subject": notification["subject"],
                     "body": notification["body"],
-                    "status": "sent_dummy",
+                    "status": notification.get("status", "prepared_only"),
                     "provider": notification["provider"],
                     "metadata": notification,
-                    "sent_at": now_iso(),
+                    "sent_at": notification.get("sent_at"),
                 },
                 returning=True,
             )
