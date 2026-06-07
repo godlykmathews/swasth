@@ -1,5 +1,5 @@
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "http://127.0.0.1:8000";
+  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "https://swasth-78li.vercel.app";
 
 export const DEMO_LEGACY_ID = "00000000-0000-4000-8000-000000000001";
 
