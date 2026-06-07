@@ -51,47 +51,18 @@ Once activated, AFTERLIFE AI:
 
 Future versions may support AI-assisted document verification, memorial account requests, subscription management, and estate administration workflows.
 
+## Features
+- Legacy profile creation with personal, family, and trusted contact details
+- Emergency family activation code generation
+- Digital asset vault for subscriptions, social accounts, financial accounts, insurance, property, documents, final wishes, and memories
+- Executor activation flow with death confirmation
+- Real email delivery through Gmail SMTP for executor notifications
+- Supabase-backed storage for legacy records and notification logs
+- Cloudinary-ready upload support
+- Optional OpenAI-generated estate notification emails
+- Emotional, vintage memorial-inspired UI instead of a SaaS dashboard
+
 ---
-
-## Key Features
-
-### Legacy Profile
-
-Store personal information, family details, and trusted contacts.
-
-### Family Activation Code
-
-A secure code that enables authorized family members to begin the executor process.
-
-### Digital Asset Vault
-
-Manage:
-
-* Subscriptions
-* Social media accounts
-* Financial accounts
-* Important online services
-
-### Insurance & Property Records
-
-Keep policies, ownership records, and supporting documents accessible.
-
-### Final Wishes
-
-Store instructions, messages, and personal requests.
-
-### Memory Vault
-
-Preserve family photographs, videos, voice recordings, and personal memories.
-
-### Executor Dashboard
-
-Provides a guided workflow for family members after activation.
-
-### Notification System
-
-Sends executor and family notifications through email.
-
 
 ## Tech Stack
 - Frontend: Next.js 15, TypeScript, Tailwind CSS, Framer Motion, shadcn/ui
