@@ -68,7 +68,7 @@ export default function SetupPage() {
   }
 
   return (
-    <PageShell className="paper-section">
+    <PageShell className="bg-[url('/images/swasth-sky-home.png')] bg-cover bg-center bg-fixed">
       <MemorialNav />
       <CloudField />
       <PageIntro

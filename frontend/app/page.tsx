@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function LandingPage() {
   return (
-    <main className="paper-section relative min-h-screen overflow-hidden px-5 pb-20 pt-28 md:px-10">
+    <main className="relative min-h-screen overflow-hidden px-5 pb-20 pt-28 md:px-10 bg-[url('/images/sky-garden.png')] bg-cover bg-center bg-fixed">
       <MemorialNav />
       <CloudField />
       <div className="classical-column left-3 hidden lg:block" aria-hidden="true" />
