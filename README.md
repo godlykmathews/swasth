@@ -87,6 +87,8 @@ Codex and OpenAI tools were used throughout the build for:
 <a href="https://www.youtube.com/watch?v=7o7zXwC6R-k" target="_blank">
   <img src="https://img.youtube.com/vi/7o7zXwC6R-k/maxresdefault.jpg" alt="Swasth AI | Godly K Mathews | Codex Community Hackathon" width="600" />
 </a>
+<br>
+https://www.youtube.com/watch?v=7o7zXwC6R-k
 
 ## Screenshots
 <img width="3420" height="1850" alt="Screenshot 2026-06-07 at 07-22-13 Swasth AI A Digital Memorial Garden" src="https://github.com/user-attachments/assets/38014cae-b726-4bcc-bb67-3dbdc5d64546" />
