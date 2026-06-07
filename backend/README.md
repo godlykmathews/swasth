@@ -1,4 +1,4 @@
-# AFTERLIFE AI Backend
+# Swasth AI Backend
 
 FastAPI backend backed by Supabase Postgres.
 
@@ -28,7 +28,7 @@ SMTP_PORT=587
 SMTP_USERNAME=work.gkm@gmail.com
 SMTP_PASSWORD=your-gmail-app-password
 SMTP_FROM_EMAIL=work.gkm@gmail.com
-SMTP_FROM_NAME=AFTERLIFE AI Executor
+SMTP_FROM_NAME=Swasth AI Executor
 SMTP_TEST_RECIPIENT=godlykmathews2@gmail.com
 SMTP_FORCE_TEST_RECIPIENT=true
 ```

@@ -56,7 +56,7 @@ def send_estate_email(target: JsonDict, subject: str, body: str, declarant_email
     final_body = body
     if recipient != target["recipient_email"]:
         final_body = (
-            "AFTERLIFE AI TEST DELIVERY\n"
+            "Swasth AI TEST DELIVERY\n"
             f"Original service recipient: {target['recipient_email']}\n"
             f"Service: {target['service_name']}\n\n"
             f"{body}"

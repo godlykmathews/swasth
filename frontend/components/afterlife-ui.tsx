@@ -194,7 +194,7 @@ export function MemorialNav() {
   return (
     <nav className="page-nav">
       <Link href="/" className="page-nav-brand">
-        AFTERLIFE AI
+        Swasth AI
       </Link>
       <div className="page-nav-links">
         {navLinks.map((link) => (

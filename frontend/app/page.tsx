@@ -20,7 +20,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-base text-rosewood">AFTERLIFE AI</p>
+          <p className="text-base text-rosewood">Swasth AI</p>
           <h1 className="mx-auto mt-4 max-w-4xl text-5xl leading-[1.05] text-ink md:text-7xl">
             Legacy Setup And Family Activation
           </h1>

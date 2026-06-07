@@ -47,7 +47,7 @@ export default function ExamplePage() {
       <PageIntro
         kicker="Example Legacy"
         title="Elena Moreno's Living Archive"
-        copy="A sample memorial story showing how an AfterLife AI legacy can hold practical guidance and intimate family memory in the same graceful place."
+        copy="A sample memorial story showing how an Swasth AI legacy can hold practical guidance and intimate family memory in the same graceful place."
       />
 
       <section className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">

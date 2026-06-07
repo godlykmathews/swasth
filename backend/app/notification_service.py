@@ -89,7 +89,7 @@ def fallback_email(plan: JsonDict, target: JsonDict, declaration: JsonDict) -> J
         f"Please review the account or policy associated with this person and advise the executor "
         f"on the next steps required by your process.\n\n"
         f"Requested action: {target['requested_action']}\n\n"
-        "This message was prepared by AFTERLIFE AI for executor review and estate follow-up. "
+        "This message was prepared by Swasth AI for executor review and estate follow-up. "
         "No sensitive account credentials are included in this email.\n\n"
         "Regards,\n"
         f"{declaration.get('declarant_name')}\n"

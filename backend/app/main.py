@@ -33,8 +33,8 @@ startup_state: Dict[str, Any] = {
 }
 
 app = FastAPI(
-    title="AFTERLIFE AI Backend",
-    description="FastAPI + Supabase backend for the AFTERLIFE AI hackathon prototype.",
+    title="Swasth AI Backend",
+    description="FastAPI + Supabase backend for the Swasth AI hackathon prototype.",
     version="1.0.0",
 )
 
@@ -93,7 +93,7 @@ def database_error(error: Exception) -> HTTPException:
 
 @app.get("/")
 def root() -> Dict[str, str]:
-    return {"name": "AFTERLIFE AI Backend", "status": "online"}
+    return {"name": "Swasth AI Backend", "status": "online"}
 
 
 @app.get("/health")

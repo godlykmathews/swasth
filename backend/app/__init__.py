@@ -1,1 +1,1 @@
-"""AFTERLIFE AI FastAPI backend."""
+"""Swasth AI FastAPI backend."""

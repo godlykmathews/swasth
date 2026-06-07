@@ -45,7 +45,7 @@ class Settings:
         self.smtp_username = os.getenv("SMTP_USERNAME", "")
         self.smtp_password = os.getenv("SMTP_PASSWORD", "")
         self.smtp_from_email = os.getenv("SMTP_FROM_EMAIL", self.smtp_username)
-        self.smtp_from_name = os.getenv("SMTP_FROM_NAME", "AFTERLIFE AI Executor")
+        self.smtp_from_name = os.getenv("SMTP_FROM_NAME", "Swasth AI Executor")
         self.smtp_test_recipient = os.getenv("SMTP_TEST_RECIPIENT", "")
         self.smtp_force_test_recipient = os.getenv("SMTP_FORCE_TEST_RECIPIENT", "true").lower() in {"1", "true", "yes"}
         self.auto_migrate = os.getenv("AUTO_MIGRATE", "true").lower() in {"1", "true", "yes"}
