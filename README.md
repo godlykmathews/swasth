@@ -135,9 +135,7 @@ backend/sql/schema.sql
 
 Frontend runs at:
 
-```bash
-http://127.0.0.1:3000
-```
+https://swasth-rose.vercel.app/
 
 Backend runs at:
 
