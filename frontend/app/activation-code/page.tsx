@@ -2,20 +2,37 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Download, PenLine, ShieldCheck } from "lucide-react";
+import { Download, FileText, PenLine, ShieldCheck } from "lucide-react";
 import { CloudField, MemorialNav, OrnamentalDivider, PageShell } from "@/components/afterlife-ui";
 import { getActivationCode } from "@/lib/afterlife-api";
+import { downloadActivationCertificatePdf } from "@/lib/certificate-pdf";
 import { buttonVariants } from "@/components/ui/button";
 
 export default function ActivationCodePage() {
   const [code, setCode] = useState("");
   const [source, setSource] = useState("Complete setup to generate a code.");
+  const [downloadNote, setDownloadNote] = useState(
+    "The certificate downloads as a formatted A4 PDF."
+  );
 
   useEffect(() => {
     const storedCode = getActivationCode("");
     setCode(storedCode);
     setSource(storedCode ? "Store this with important documents." : "No code found in this browser session.");
   }, []);
+
+  function handleDownloadCertificate() {
+    if (!code) {
+      setDownloadNote("Complete setup first so the certificate can include your activation code.");
+      return;
+    }
+
+    downloadActivationCertificatePdf({
+      activationCode: code,
+      appName: "Swasth AI"
+    });
+    setDownloadNote("PDF certificate downloaded.");
+  }
 
   return (
     <PageShell className="paper-section">
@@ -34,7 +51,7 @@ export default function ActivationCodePage() {
           <div className="activation-seal mx-auto flex h-24 w-24 items-center justify-center text-[#fff8e8]">
             <ShieldCheck size={42} strokeWidth={1.55} />
           </div>
-          <p className="mt-8 text-base text-rosewood">Certificate Of Preparedness</p>
+          <p className="mt-8 text-base text-rosewood">Swasth AI Certificate Of Preparedness</p>
           <h1 className="mx-auto mt-4 max-w-4xl text-5xl leading-[1.05] text-ink md:text-7xl">
             Emergency Family Activation Code
           </h1>
@@ -66,16 +83,19 @@ export default function ActivationCodePage() {
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <button
               type="button"
-              onClick={() => window.print()}
+              onClick={handleDownloadCertificate}
+              disabled={!code}
               className={buttonVariants({ variant: "outline", size: "lg" })}
             >
               <Download size={20} strokeWidth={1.7} />
-              Download Certificate
+              Download PDF Certificate
             </button>
             <a href="/executor" className={buttonVariants({ size: "lg" })}>
+              <FileText size={20} strokeWidth={1.7} />
               Family Activation Page
             </a>
           </div>
+          <p className="mt-4 text-sm text-umber">{downloadNote}</p>
         </motion.div>
       </section>
     </PageShell>
