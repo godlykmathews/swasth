@@ -1,66 +1,104 @@
-# AFTERLIFE AI
+```markdown
+# Swasth - AFTERLIFE AI
 
-A full-stack hackathon prototype for a digital estate workflow, built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, FastAPI, Supabase Postgres, Cloudinary uploads, and optional OpenAI-generated notification drafts.
+## Overview
+Swasth is a frontend-first hackathon prototype for a premium digital legacy and executor system. It helps a person create a legacy profile, store important life details, receive a family activation code, and allow trusted family members to activate an executor workflow after death.
 
-## Run
+## Problem Statement
+Families often struggle to find important documents, digital accounts, subscriptions, insurance information, property records, final wishes, and memories after a loved one passes away. The process is emotionally difficult, fragmented, and usually handled too late.
+
+## Solution
+Swasth  creates a peaceful digital legacy vault where users can prepare essential information in advance. After setup, the system generates a family activation code. When a trusted family member enters the code and confirms death, the backend marks the profile as deceased, stores the event, generates executor notifications, and sends service-specific emails.
+
+## Features
+- Legacy profile creation with personal, family, and trusted contact details
+- Emergency family activation code generation
+- Digital asset vault for subscriptions, social accounts, financial accounts, insurance, property, documents, final wishes, and memories
+- Executor activation flow with death confirmation
+- Real email delivery through Gmail SMTP for executor notifications
+- Supabase-backed storage for legacy records and notification logs
+- Cloudinary-ready upload support
+- Optional OpenAI-generated estate notification emails
+- Emotional, vintage memorial-inspired UI instead of a SaaS dashboard
+
+## Tech Stack
+- Frontend: Next.js 15, TypeScript, Tailwind CSS, Framer Motion, shadcn/ui
+- Backend: FastAPI
+- Database: Supabase Postgres
+- APIs: OpenAI API, Cloudinary API, Gmail SMTP
+- Hosting: Local prototype; frontend can be deployed to Vercel, backend to Render/Railway/Fly.io
+
+## Codex / OpenAI Usage
+Codex and OpenAI tools were used throughout the build for:
+- Ideation and product flow planning
+- Frontend architecture and UI generation
+- Vintage memorial-inspired visual design
+- FastAPI backend implementation
+- Supabase integration
+- Debugging database and frontend runtime issues
+- Gmail SMTP email integration
+- OpenAI estate email generation logic
+- Testing, build verification, and documentation
+
+## Demo
+Add demo or pitch video link here.
+
+## Screenshots
+Add screenshots of the landing page, setup flow, activation code page, executor confirmation page, and notification results here.
+
+## How to Run Locally
 
 ```bash
+git clone <repo-url>
+cd <project-folder>
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000` or the port printed by Next.js.
-
-## FastAPI Backend
-
-The backend lives in `backend/` and uses Supabase Postgres.
+Start the backend:
 
 ```bash
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env
-```
-
-Set `SUPABASE_URL`, `SUPABASE_KEY`, `SUPABASE_DB_PASSWORD`, `CLOUDINARY_URL`, and optionally `OPENAI_API_KEY` in `backend/.env`, then run:
-
-```bash
+cd ..
 npm run backend:dev
 ```
 
-The frontend reads `NEXT_PUBLIC_API_URL`, defaulting to `http://127.0.0.1:8000`.
-
-If `db.<project-ref>.supabase.co` does not resolve, copy the Supabase dashboard's database pooler URI into `DATABASE_URL` in `backend/.env`.
-
-To send real email during the executor flow, configure Gmail SMTP in `backend/.env`:
+Create `backend/.env` with:
 
 ```bash
+SUPABASE_URL=your-supabase-url
+SUPABASE_KEY=your-supabase-publishable-key
+CLOUDINARY_URL=your-cloudinary-url
+OPENAI_API_KEY=your-openai-api-key
+
 EMAIL_DELIVERY_ENABLED=true
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USERNAME=work.gkm@gmail.com
-SMTP_PASSWORD=your-gmail-app-password
-SMTP_FROM_EMAIL=work.gkm@gmail.com
-SMTP_TEST_RECIPIENT=godlykmathews2@gmail.com
+SMTP_USERNAME=your-gmail-address
+SMTP_PASSWORD=your-google-app-password
+SMTP_FROM_EMAIL=your-gmail-address
+SMTP_TEST_RECIPIENT=your-test-recipient
 SMTP_FORCE_TEST_RECIPIENT=true
 ```
 
-Use a Google App Password for `SMTP_PASSWORD`; a normal Gmail password will not work.
+Run the Supabase SQL schema from:
 
-## Workflow
+```bash
+backend/sql/schema.sql
+```
 
-- `/` quiet entry page
-- `/setup` create the legacy record in Supabase
-- `/activation-code` display the generated family activation code
-- `/executor` enter the code, mark the person deceased, and generate separate service notification emails for subscriptions, social accounts, financial accounts, and insurance policies
+Frontend runs at:
 
-Older concept pages are still present for reference, but the primary flow is `/`, `/setup`, `/activation-code`, and `/executor`.
+```bash
+http://127.0.0.1:3000
+```
 
-## Included Assets
+Backend runs at:
 
-Generated project assets live in `public/images`:
-
-- `legacy-portrait.png`
-- `sky-garden.png`
-- `memory-album.png`
+```bash
+http://127.0.0.1:8000
+```
+```
