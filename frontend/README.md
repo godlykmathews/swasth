@@ -1,4 +1,4 @@
-# AFTERLIFE AI
+# Swasth AI
 
 A full-stack hackathon prototype for a digital estate workflow, built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, FastAPI, Supabase Postgres, Cloudinary uploads, and optional OpenAI-generated notification drafts.
 

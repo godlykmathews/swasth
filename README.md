@@ -1,8 +1,8 @@
-# AFTERLIFE AI
+# Swasth AI
 
 ## Overview
 
-AFTERLIFE AI is a digital legacy and executor platform that helps people organize everything their family may need after they pass away.
+Swasth AI is a digital legacy and executor platform that helps people organize everything their family may need after they pass away.
 
 Instead of leaving loved ones searching through emails, documents, subscriptions, insurance policies, social media accounts, property records, and final wishes, users can securely prepare a complete digital legacy in advance.
 
@@ -19,7 +19,7 @@ Families often struggle to locate important documents, insurance policies, prope
 
 ## The Solution
 
-AFTERLIFE AI provides a secure digital legacy vault where users can prepare their digital estate before it is needed.
+Swasth AI provides a secure digital legacy vault where users can prepare their digital estate before it is needed.
 
 Users can:
 
@@ -39,7 +39,7 @@ When a verified family member reports a death and submits the activation code, t
 
 ## Executor Workflow
 
-Once activated, AFTERLIFE AI:
+Once activated, Swasth AI:
 
 1. Marks the profile as deceased
 2. Notifies designated family members
