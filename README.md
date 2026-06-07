@@ -83,11 +83,18 @@ Codex and OpenAI tools were used throughout the build for:
 - OpenAI estate email generation logic
 - Testing, build verification, and documentation
 
-## Demo
-Add demo or pitch video link here.
+## Video Demo
+<a href="https://www.youtube.com/watch?v=7o7zXwC6R-k" target="_blank">
+  <img src="https://img.youtube.com/vi/7o7zXwC6R-k/maxresdefault.jpg" alt="Swasth AI | Godly K Mathews | Codex Community Hackathon" width="600" />
+</a>
 
 ## Screenshots
-Add screenshots of the landing page, setup flow, activation code page, executor confirmation page, and notification results here.
+<img width="3420" height="1850" alt="Screenshot 2026-06-07 at 07-22-13 Swasth AI A Digital Memorial Garden" src="https://github.com/user-attachments/assets/38014cae-b726-4bcc-bb67-3dbdc5d64546" />
+<img width="3420" height="3846" alt="image" src="https://github.com/user-attachments/assets/a46c7da0-2aa5-4d5f-8866-6d44c6f4c3d0" />
+<img width="1422" height="898" alt="image" src="https://github.com/user-attachments/assets/b0eb6d88-61f3-41eb-87a9-f7d9b42ac611" />
+<img width="3420" height="2856" alt="Screenshot 2026-06-07 at 07-22-30 Swasth AI A Digital Memorial Garden" src="https://github.com/user-attachments/assets/3e9b859d-151d-44dc-af80-9e52e8c84e86" />
+<img width="3420" height="2941" alt="604014600-7dffd385-2099-46e7-9ec2-8dadc46f8a01" src="https://github.com/user-attachments/assets/a5491bbc-5433-40fe-b453-a9ee9186e647" />
+
 
 ## How to Run Locally
 
