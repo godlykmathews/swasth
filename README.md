@@ -50,7 +50,7 @@ Add screenshots of the landing page, setup flow, activation code page, executor 
 
 ```bash
 git clone <repo-url>
-cd <project-folder>
+cd frontend
 npm install
 npm run dev
 ```
