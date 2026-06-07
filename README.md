@@ -1,25 +1,97 @@
-```markdown
 # AFTERLIFE AI
 
 ## Overview
-AFTERLIFE AI is a frontend-first hackathon prototype for a premium digital legacy and executor system. It helps a person create a legacy profile, store important life details, receive a family activation code, and allow trusted family members to activate an executor workflow after death.
 
-## Problem Statement
-Families often struggle to find important documents, digital accounts, subscriptions, insurance information, property records, final wishes, and memories after a loved one passes away. The process is emotionally difficult, fragmented, and usually handled too late.
+AFTERLIFE AI is a digital legacy and executor platform that helps people organize everything their family may need after they pass away.
 
-## Solution
-AFTERLIFE AI creates a peaceful digital legacy vault where users can prepare essential information in advance. After setup, the system generates a family activation code. When a trusted family member enters the code and confirms death, the backend marks the profile as deceased, stores the event, generates executor notifications, and sends service-specific emails.
+Instead of leaving loved ones searching through emails, documents, subscriptions, insurance policies, social media accounts, property records, and final wishes, users can securely prepare a complete digital legacy in advance.
 
-## Features
-- Legacy profile creation with personal, family, and trusted contact details
-- Emergency family activation code generation
-- Digital asset vault for subscriptions, social accounts, financial accounts, insurance, property, documents, final wishes, and memories
-- Executor activation flow with death confirmation
-- Real email delivery through Gmail SMTP for executor notifications
-- Supabase-backed storage for legacy records and notification logs
-- Cloudinary-ready upload support
-- Optional OpenAI-generated estate notification emails
-- Emotional, vintage memorial-inspired UI instead of a SaaS dashboard
+The platform acts as a personal digital executor. It stores important life information, trusted family contacts, legal documents, insurance details, digital assets, memories, and final instructions in one place. When a verified death event is reported using a secure family activation code, the system initiates an executor workflow that guides the family through the next steps.
+
+---
+
+## The Problem
+
+Families often struggle to locate important documents, insurance policies, property records, subscriptions, online accounts, and final wishes after a loved one passes away. This information is usually scattered across devices, emails, folders, and various online services, creating confusion and stress during an already difficult time. The lack of a centralized and accessible legacy management system makes the process of handling a person's digital and personal estate unnecessarily challenging.
+
+
+---
+
+## The Solution
+
+AFTERLIFE AI provides a secure digital legacy vault where users can prepare their digital estate before it is needed.
+
+Users can:
+
+* Create a complete legacy profile
+* Add trusted family contacts
+* Store insurance and property records
+* Track subscriptions and online accounts
+* Upload wills and legal documents
+* Preserve memories, photos, and messages
+* Record final wishes and instructions
+
+After setup, the platform generates a unique Family Activation Code that can be stored with important documents or shared with trusted relatives.
+
+When a verified family member reports a death and submits the activation code, the system activates the Executor Workflow.
+
+---
+
+## Executor Workflow
+
+Once activated, AFTERLIFE AI:
+
+1. Marks the profile as deceased
+2. Notifies designated family members
+3. Generates executor guidance and checklists
+4. Prepares insurance and document retrieval information
+5. Organizes digital assets and subscriptions
+6. Preserves memories and final messages
+7. Creates a complete legacy summary for the family
+
+Future versions may support AI-assisted document verification, memorial account requests, subscription management, and estate administration workflows.
+
+---
+
+## Key Features
+
+### Legacy Profile
+
+Store personal information, family details, and trusted contacts.
+
+### Family Activation Code
+
+A secure code that enables authorized family members to begin the executor process.
+
+### Digital Asset Vault
+
+Manage:
+
+* Subscriptions
+* Social media accounts
+* Financial accounts
+* Important online services
+
+### Insurance & Property Records
+
+Keep policies, ownership records, and supporting documents accessible.
+
+### Final Wishes
+
+Store instructions, messages, and personal requests.
+
+### Memory Vault
+
+Preserve family photographs, videos, voice recordings, and personal memories.
+
+### Executor Dashboard
+
+Provides a guided workflow for family members after activation.
+
+### Notification System
+
+Sends executor and family notifications through email.
+
 
 ## Tech Stack
 - Frontend: Next.js 15, TypeScript, Tailwind CSS, Framer Motion, shadcn/ui
@@ -100,5 +172,4 @@ Backend runs at:
 
 ```bash
 http://127.0.0.1:8000
-```
 ```
